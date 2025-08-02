@@ -16,10 +16,23 @@ document.addEventListener('DOMContentLoaded', () => {
   // Toggle mobile navigation (hamburger menu)
   const navToggle = document.querySelector('#nav-toggle');
   const header = document.querySelector('header');
-  if (navToggle && header) {
+  const navLinks = document.querySelector('#nav-links');
+
+  if (navToggle && header && navLinks) {
     navToggle.addEventListener('click', () => {
       header.classList.toggle('nav-open');
-      navToggle.setAttribute('aria-expanded', header.classList.contains('nav-open'));
+      const expanded = header.classList.contains('nav-open');
+      navToggle.setAttribute('aria-expanded', expanded);
+      navLinks.style.display = expanded ? 'flex' : 'none';
+    });
+
+    // Hide menu after clicking a link (optional)
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        header.classList.remove('nav-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        navLinks.style.display = 'none';
+      });
     });
   }
 
@@ -37,10 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const email = contactForm.querySelector('#email');
       const message = contactForm.querySelector('#message');
 
-      if (!name || !email || !message) {
-        console.warn('Form fields not found');
-        return;
-      }
+      if (!name || !email || !message) return;
 
       const nameVal = name.value.trim();
       const emailVal = email.value.trim();
