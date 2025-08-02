@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us - Remote Hustle Africa</title>
+  <meta name="description" content="Learn more about Remote Hustle Africa, our mission, and how we help Africans find remote jobs and earn online." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Header with Navigation -->
+  <header>
+<div style="display: flex; align-items: center; gap: 1rem;">
+  <img src="images/logo.png" alt="Remote Hustle Africa Logo"
+       style="height: 80px; max-height: 90px; object-fit: contain;" />
+  <h1 style="font-size: 2rem; color: #fff; margin: 0;">Remote Hustle Africa</h1>
+</div>
+
+  <nav>
+  <a href="index.html">Home</a> |
+  <a href="about.html">About</a> |
+  <a href="blog.html">Blog</a> |
+  <a href="contact.html">Contact</a> |
+  <a href="apply.html">Apply</a> |
+  <a href="careers.html">Careers</a> |
+  <a href="privacy.html">Privacy</a> |
+  <a href="terms.html">Terms</a>
+</nav>
+
+  </header>
+
+  <!-- Hero Slideshow Section -->
+  <section class="hero-image">
+    <div class="slides">
+      <div class="slide active" style="background-image: url('images/slide1.png');"></div>
+      <div class="slide" style="background-image: url('images/slide2.webp');"></div>
+      <div class="slide" style="background-image: url('images/hero.avif');"></div>
+      <div class="slide" style="background-image: url('images/slide4.webp');"></div>
+      <div class="slide" style="background-image: url('images/slide5.webp');"></div>
+    </div>
+    <div class="hero-text">
+      <h2>Empowering Africans Through Remote Work</h2>
+      <p>
+        Remote Hustle Africa connects ambitious Africans to global remote jobs,
+        empowering them to earn online, work flexibly, and build digital careers.
+      </p>
+    </div>
+  </section>
+
+  <!-- About Content -->
+  <main>
+    <section class="content">
+      <h2>About Remote Hustle Africa</h2>
+      <p>
+        Remote Hustle Africa is dedicated to empowering Africans with knowledge,
+        tools, and resources to find remote jobs and earn income online.
+        Everyone deserves the opportunity to work flexibly and connect with global clients.
+      </p>
+      <p>
+        Our mission is to bridge the gap between talent in Africa and
+        international remote work opportunities by providing practical guides,
+        tips, and updates on the best freelancing platforms and job openings.
+      </p>
+      <p>
+        Started in Uganda, we aim to grow as a trusted hub for remote work
+        enthusiasts across Africa.
+      </p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+ <footer style="background-color: #222; color: #ccc; padding: 30px 20px; font-size: 14px;">
+    <div style="max-width: 1100px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between;">
+      
+      <div style="flex: 1 1 200px; margin-bottom: 20px;">
+        <h4 style="color: #fff;">Contact Us</h4>
+        <p>Email: <a href="mailto:info@remotehustleafrica.com" style="color: #66ccff;">info@remotehustleafrica.com</a></p>
+        <p>Phone: +254 700 000 000</p>
+        <p>Address: Nairobi, Kenya</p>
+      </div>
+      
+      <div style="flex: 1 1 150px; margin-bottom: 20px;">
+        <h4 style="color: #fff;">Quick Links</h4>
+        <ul style="list-style: none; padding: 0;">
+          <li><a href="privacy.html" style="color: #66ccff; text-decoration: none;">Privacy Policy</a></li>
+          <li><a href="careers.html" style="color: #66ccff; text-decoration: none;">Careers</a></li>
+          <li><a href="apply.html" style="color: #66ccff; text-decoration: none;">Apply Now</a></li>
+          <li><a href="contact.html" style="color: #66ccff; text-decoration: none;">Contact</a></li>
+        </ul>
+      </div>
+      
+      <div style="flex: 1 1 200px; margin-bottom: 20px;">
+        <h4 style="color: #fff;">About Remote Hustle Africa</h4>
+        <p>Your trusted platform connecting Africans to remote work opportunities worldwide. Empowering careers through remote jobs, freelancing guides, and online income tips.</p>
+      </div>
+      
+    </div>
+
+    <div style="text-align: center; border-top: 1px solid #444; margin-top: 20px; padding-top: 15px; font-size: 13px; color: #888;">
+      &copy; 2025 Remote Hustle Africa. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- JS for Hero Image Slideshow -->
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let current = 0;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
+    }
+
+    function nextSlide() {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    }
+
+    showSlide(current);
+    setInterval(nextSlide, 5000); // every 5 seconds
+  </script>
+
+</body>
+</html>
