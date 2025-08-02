@@ -393,3 +393,50 @@ a:hover {
   text-decoration: underline;
   color: #99004d;
 }
+/* ---------- NAV TOGGLE (HAMBURGER) BUTTON ---------- */
+#nav-toggle {
+  cursor: pointer;
+  font-size: 1.8rem;
+  background: none;
+  color: #fff;
+  border: none;
+  margin-left: auto;
+  display: none; /* hidden by default, show on mobile */
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+#nav-toggle:hover {
+  color: #B8860B;
+}
+
+/* ---------- SHOW HAMBURGER ON MOBILE ---------- */
+@media (max-width: 768px) {
+  #nav-toggle {
+    display: block;
+  }
+
+  #nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #6a0000;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    border-radius: 0 0 12px 12px;
+  }
+
+  header.nav-open #nav-links {
+    display: flex;
+  }
+
+  nav a {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
