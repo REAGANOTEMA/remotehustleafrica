@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Toggle mobile navigation
+  // Toggle mobile navigation (hamburger menu)
   const navToggle = document.querySelector('#nav-toggle');
   const header = document.querySelector('header');
   if (navToggle && header) {
